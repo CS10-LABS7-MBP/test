@@ -13,7 +13,8 @@ server.get('/', (req, res) => {
   res.status(200).json({ good: 'Working' });
 });
 
-server.listen(9000, err => {
+const PORT = process.env.PORT || 9000;
+server.listen(PORT, err => {
   if (err) return console.log('error');
   console.log(`Server running on port 9000`);
 });
